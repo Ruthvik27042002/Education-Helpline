@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="project.css">
+  <title>EDUCATION HELPLINE</title>
+  <link rel="icon" href="https://as1.ftcdn.net/jpg/00/97/00/00/500_F_97000073_qnDFUJdLGmxr3sIXe0CHv0MT1LbYuQKb.jpg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <style>
+  #services_us_top{
+	  background-image: url('https://cdn.pixabay.com/photo/2021/04/13/09/50/road-6175186_960_720.jpg');
+    height: 100vh;
+	  background-size: cover;
+    background-position: top center;
+  	position: relative;
+	  box-sizing: border-box;
+  }
+  .services_us_top{
+	  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+  }
+  .services_us_top h1{
+	font-size: 6rem;
+	color: #0a1931;
+  }
+  .services_us_top p{
+	font-size: 2rem;
+	color: #ffc93c;
+  }
+  #contact_our_goal{
+    position: relative;
+	  box-sizing: border-box;
+    padding: 80px 10px 0px;
+    text-align: center;
+    height: 130vh;
+    background-image: url('https://cdn.pixabay.com/photo/2020/09/24/03/50/achievement-5597527_960_720.png');
+    background-size: cover;
+  }
+  #contact_our_goal::after{
+    content: '';
+    background-color: blueviolet;
+  }
+  #contact_our_goal div img{
+    width: 50%;
+    float: left;
+  }
+  .contact_our_goal{
+    height: 100%;
+    padding-left: 70%;
+    text-transform: uppercase;
+  }
+  .contact_our_goal p{
+    padding-top: 70px;
+    font-size: 7.5rem;
+    line-height: 8rem;
+    color: #4b778d;
+  }
+  .contact_our_goal div{
+    height: 100%;
+  }
+  #services_info_card{
+    background-color: #fffbdf;
+  }
+  .services_info_card{
+    flex-wrap: wrap;
+    text-align: center;
+    min-height: 70vh;
+  }
+  .services_card_heading{
+    flex: 0 0 100%;
+  }
+  .services_card_view{
+    flex: 0 0 30%;
+    transform: 0.3s linear;
+    background-color: #c8c2bc;
+    margin: 0 5px;
+  }
+  .services_card_icon{
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 70px;
+  }
+  .services_card_icon i{
+  transform: scale(5);
+  position: relative;
+  margin-top: 30px;
+  color: #907fa4;
+  }
+  .services_card_title{
+    font-size: 2rem;
+  }
+  .services_card_view:hover p{
+    display: inherit;
+  }
+  .services_card_view:hover h3{
+    display: inherit;
+  }
+  .services_card_view h3{
+    display: none;
+    transition: 0.3s ease linear;
+    color: #21094e;
+  }
+  .services_card_title p{
+    display: none;
+    transition: 0.3 ease linear;
+    color: #962d2d;
+  }
+  #services_event_details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    flex-direction: column;
+}
+  .services_events_details{
+    width: 100%;
+    height: 100vh;
+    margin: 25px 0px;
+  }
+  .services_events_details .services_events_left{
+    width: 50%;
+    height: 100%;
+    padding: 50px;
+    /* background-color: teal; */
+    display: inline-block;
+  }
+  .services_events_content{
+    color: #fff;
+    padding: 40px;
+    transition: 0.5s;
+  }
+  .services_events_content p{
+    color: #8e9775;
+  }
+  .services_events_content:hover {
+    background-color: #022e57;
+  }
+  .services_events_content h1{
+    color: #eba83a;
+    font-size: 4rem;
+  }
+  .services_events_info{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: right;
+    /* background-color: thistle; */
+    background: rgb(0,0,0,0.5);
+  }
+  .services_events_info ul{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 40px;
+  }
+  .services_events_info ul li{
+    list-style: none;
+    background-color: white;
+    height: 200px;
+    margin: 15px 0px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    }
+  .services_events_info ul li .services_events_date{
+    position: relative;
+    padding: 20px;
+    width: 30%;
+    height: 40vh;
+    float: left;
+    text-align: center;
+    transition: 0.5s;
+  }
+  .services_events_info ul li::-webkit-scrollbar{
+    background: transparent;
+  }
+  .services_events_info ul li .services_events_date:hover{
+    background-color: #ffddcc;
+  }
+  .services_events_info ul li .services_events_date h2,h1{
+    color: tomato;
+    position: relative;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+  }
+  .services_events_info ul li .services_events_date h2 span{
+    color: black;
+    text-align: center;
+  }
+  .services_events_contests a{
+    font-size: 1.75rem;
+  }
+  .services_events_contests h1{
+    font-size: 2.2rem;
+    color: #0c4271;
+  }
+  .services_events_contests h1 i{
+    font-size: 2.2rem;
+    color: #3b8acf69;
+  }
+  </style>
+</head>
+
+  <header>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="project.html">
+            <h1><img src="https://as1.ftcdn.net/jpg/00/97/00/00/500_F_97000073_qnDFUJdLGmxr3sIXe0CHv0MT1LbYuQKb.jpg" alt="" style="width: 2cm;height: 2cm;"> <span>E</span>ducation <span>H</span>elpline</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <ul>
+            <li><a href="project.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="#ruthvik_1">Courses</a>
+            <div class="sub_container_1">
+              <ul>
+                <li><a href="topcourses.html">Top Courses</a></li>
+                <li><a href="topcoursesplatform.html">Top Platforms</a></li>
+              </ul>
+            </div>
+          </li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  </header>
+  <!-- End Header -->
+  <section id="services_us_top">
+    <div class="services_us_top">
+        <div>
+          <h1>Services</h1>
+          <p>"Do it with passion or not at all"</p>
+        </div>
+    </div>
+</section>
+<section id="contact_our_goal">
+  <div>
+    <img src="https://cdn.pixabay.com/photo/2013/07/13/09/35/darts-155726_960_720.png" alt="">
+  </div>
+  <div class="contact_our_goal">
+      <div>
+        <br><br><br><br><br><br>
+        <h1 style="font-size: 5rem;">OUR GOAL</h1>
+        <p>"Be the Energy you want to attract"</p>
+      </div>
+  </div>
+</section>
+
+<section id="services_info_card">
+  <div class="services_info_card container">
+    
+    <div class="services_card_heading">
+      <h2 style="font-size: 5rem;">Our Services</h2>
+    </div>
+    
+    <div class="services_card_view">
+      <div class="services_card_icon">
+        <i class="fas fa-paint-brush"></i>
+      </div>
+      <div class="services_card_title">
+        <a href="#services_first"><h3>WEB DESIGN</h3></a>
+        <p>Details of the services information</p>
+    </div>
+  </div>
+
+    <div class="services_card_view">
+      <div class="services_card_icon">
+        <i class="fas fa-database"></i>
+      </div>
+      <div class="services_card_title">
+        <a href="#services_second"><h3>DATABASE</h3></a>
+        <p>Details of the services information</p>
+    </div>
+  </div>
+
+    <div class="services_card_view">
+      <div class="services_card_icon">
+        <i class="fas fa-file-code"></i>
+      </div>
+      <div class="services_card_title">
+        <a href="#services_third"><h3>HTML</h3></a>
+        <p>Details of the services information</p>
+    </div>
+  </div>
+
+    <div class="services_card_view">
+      <div class="services_card_icon">
+        <i class="fas fa-layer-group"></i>
+      </div>
+      <div class="services_card_title">
+        <a href="#services_fourth"><h3>PROGRAMMING</h3></a>
+        <p>Details of the services information</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Event details -->
+
+<section id="services_event_details">
+  
+  <div id="services_first" class="services_events_details" style="background-image: url('https://cdn.pixabay.com/photo/2018/05/10/11/34/concert-3387324_960_720.jpg');background-size: cover;">   <div class="services_events_left">
+      <div class="services_events_content">
+        <h1>WEB DESIGN</h1>
+        <p>This way, you will know for sure that your work is paid fairly, and both parties accept the terms and conditions you've set for offering your services.</p>
+      </div>
+    </div>
+    <div class="services_events_info">
+      <ul>
+        <li>
+          <div class="services_events_date">
+            <h2>24</h2>
+            <h1>April - 2021</h1><br><br>
+            <h2><span>to</span></h2><br><br>
+            <h2>27</h2>
+            <h1>April - 2022</h1>
+          </div>
+          <div class="services_events_contests">
+            <h1>Designcoder <i>-HackerRank</i></h1>
+            <p>Designcoding is a new approach to strategic design. It helps organizations encode and express strategy through the designs of services. It involves diving deep into a problem space and gathering input from multiple perspectives to solve a design puzzle. Join now for more information.</p>
+            <a href="registerform.html" target="_blank">Join Now</a>
+          </div>
+        </li>
+        <li>
+          <div class="services_events_date">
+            <h2>15</h2>
+            <h1>June - 2021</h1><br><br>
+            <h2><span>to</span></h2><br><br>
+            <h2>30</h2>
+            <h1>June - 2021</h1>
+          </div>
+          <div class="services_events_contests">
+            <h1>CSS Design Awards <i>-ChefCode</i></h1>
+            <p>The CSSDA levels the playing field to ensure solo freelancers and agencies all have a chance to be recognized by ensuring the award candidate is competing against similarly sized creatives. All submissions for Website of the Day are reviewed by an international panel of industry experts. Join now for more information.</p>
+            <a href="registerform.html" target="_blank">Join Now</a>
+          </div>
+        </li>
+        <li>
+          <div class="services_events_date">
+            <h2>07</h2>
+            <h1>August - 2021</h1><br><br>
+            <h2><span>to</span></h2><br><br>
+            <h2>12</h2>
+            <h1>September - 2021</h1>
+          </div>
+          <div class="services_events_contests">
+            <h1>Aviation Maintenance & Aircraft Cleaning Website <i>-HackerRank</i></h1>
+            <p>Right now the biggest thing is for our customer to see a website be able to book our services online and see our staff. The website must be modern and clean. We would like a website that can be mobile as well with future ideas that an app where you could book cleanings and maintenance. Join now for more information.</p>
+            <a href="registerform.html" target="_blank">Join Now</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div id="services_second" class="services_events_details" style="background-image: url('https://cdn.pixabay.com/photo/2016/03/28/14/19/destination-1285851_960_720.png');background-size: cover;">
+    <div class="services_events_left">
+      <div class="services_events_content">
+        <h1>DATABASE</h1>
+        <p>This way, you will know for sure that your work is paid fairly, and both parties accept the terms and conditions you've set for offering your services.</p>
+      </div>
+    </div>
+    <div class="services_events_info">
+      <ul>
+        <li>
+          <div class="services_events_date">
+            <h2>22</h2>
+            <h1>May - 2021</h1><br><br>
+            <h2><span>to</span></h2><br><br>
+            <h2>24</h2>
+            <h1>May - 2021</h1>
+          </div>
+          <div class="services_events_contests">
+            <h1>Online National Quiz Competition <i>-LeetCode</i></h1>
+            <p>LeetCode is back with a very exciting quiz competition to Improve your skills and enhance your profile. The Online National Quiz Competition on Database Management System is organised from May 22 to May 24. Join now for information.</p>
+            <a href="registerform.html" target="_blank">Join Now</a>
+          </div>
+        </li>
+        <li>
+          <div class="services_events_date">
+            <h2>08</h2>
+            <h1>July - 2021</h1><br><br>
+            <h2><span>to</span></h2><br><br>
+            <h2>09</h2>
+            <h1>July - 2021</h1>
+          </div>
+          <div class="services_events_contests">
+            <h1>Contest Leaderboard <i>-HackerRank</i></h1>
+            <p>The total score of a hacker is the sum of their maximum scores for all of the challenges. Write a query to print the hacker_id, name, and total score of the hackers ordered by the descending score. If more than one hacker achieved the same total score, then sort the result by ascending hacker_id. Exclude all hackers with a total score of 0 from your result. Join now for more information.</p>
+            <a href="registerform.html" target="_blank">Join Now</a>
+          </div>
+        </li>
+        <li>
+          <div class="services_events_date">
+            <h2>16</h2>
+            <h1>May - 2021</h1><br><br>
+            <h2><span>to</span></h2><br><br>
+            <h2>17</h2>
+            <h1>May - 2021</h1>
+          </div>
+          <div class="services_events_contests">
+            <h1>Top-Competitors <i>-Hackathon</i></h1>
+            <p>Write a query to print the respective hacker_id and name of hackers who achieved full scores for more than one challenge. Order your output in descending order by the total number of challenges in which the hacker earned a full score. If more than one hacker received full scores in same number of challenges, then sort them by ascending hacker_id. Join now for more information.</p>
+            <a href="registerform.html" target="_blank">Join Now</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div id="services_third" class="services_events_details" style="background-image: url('https://images.pexels.com/photos/2423927/pexels-photo-2423927.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');background-size: cover;">
+    <div class="services_events_left">
+      <div class="services_events_content">
+        <h1>HTML</h1>
+        <p>This way, you will know for sure that your work is paid fairly, and both parties accept the terms and conditions you've set for offering your services.</p>
+      </div>
+    </div>
+    <div class="services_events_info">
+      <ul>
+        <li>
+          <div class="services_events_date">
+            <h2>06</h2>
+            <h1>March - 2021</h1><br><br>
+            <h2><span>to</span></h2><br><br>
+            <h2>08</h2>
+            <h1>March - 2021</h1>
+          </div>
+          <div class="services_events_contests">
+            <h1>HTML5/CSS3 Competition <i>-CodeProject</i></h1>
+            <p>Write an article that shows off the power of HTML5 and CSS3, the new bright standard flag under which all browsers can fly. Show us the future of the web, freed from the shackles of square boxes and 1990's thinking. Your choice is to teach us how to do it with the clearest, simplest, and most enjoyable tutorial possible, or just show us what it can do by blowing our collective minds. Animation, the canvas, transitions, local storage, drag and drop, sockets - or all of it mixed up in a bucket. Go crazy. Join now for more information.</p>
+            <a href="registerform.html" target="_blank">Join Now</a>
+          </div>
+        </li>
+        <li>
+          <div class="services_events_date">
+            <h2>25</h2>
+            <h1>February - 2022</h1><br><br>
+            <h2><span>to</span></h2><br><br>
+            <h2>26</h2>
+            <h1>February - 2022</h1>
+          </div>
+          <div class="services_events_contests">
+            <h1>Interactive Login Form <i>-CodeForces</i></h1>
+            <p>Build a Login form using HTML, CSS & Javascript. Make sure there must be three fields such as Username, Password & PIN. Also all these fields should be validate before submission that login form. Use your creativity & make form to make stand it in front. Join now for more information.</p>
+            <a href="registerform.html" target="_blank">Join Now</a>
+          </div>
+        </li>
+        <li>
+          <div class="services_events_date">
+            <h2>19</h2>
+            <h1>April - 2021</h1><br><br>
+            <h2><span>to</span></h2><br><br>
+            <h2>20</h2>
+            <h1>April - 2021</h1>
+          </div>
+          <div class="services_events_contests">
+            <h1>Build Responsive Login Form <i>-LeetCode</i></h1>
+            <p>Build a Login Form that should be responsive. Core Web Languages such as HTML, CSS & JavaScript should be used to build that. Use your creativity & logic to make your project. Project will be scored according to Layout, Creativity & Validations used on Login Form. Join now for more information.</p>
+            <a href="registerform.html" target="_blank">Join Now</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div id="services_fourth" class="services_events_details" style="background-image: url('https://cdn.pixabay.com/photo/2012/08/27/14/19/mountains-55067_960_720.png');background-size: cover;">
+    <div class="services_events_left">
+      <div class="services_events_content">
+        <h1>PROGRAMMING</h1>
+        <p>This way, you will know for sure that your work is paid fairly, and both parties accept the terms and conditions you've set for offering your services.</p>
+      </div>
+    </div>
+    <div class="services_events_info">
+      <ul>
+        <li>
+          <div class="services_events_date">
+            <h2>01</h2>
+            <h1>October - 2021</h1><br><br>
+            <h2><span>to</span></h2><br><br>
+            <h2>22</h2>
+            <h1>October - 2021</h1>
+          </div>
+          <div class="services_events_contests">
+            <h1>Popular Programming Language Challenge <i>-techgig</i></h1>
+            <p>Popular Programming Language Challenge is a programming-focused challenge designed to inspire the creative and dynamic generation of tech professionals to put their skills to the test. For three weeks, aspiring developers will compete for a chance to win prizes. Join now for more information.</p>
+            <a href="registerform.html" target="_blank">Join Now</a>
+          </div>
+        </li>
+        <li>
+          <div class="services_events_date">
+            <h2>09</h2>
+            <h1>October - 2021</h1><br><br>
+            <h2><span>to</span></h2><br><br>
+            <h2>12</h2>
+            <h1>October - 2021</h1>
+          </div>
+          <div class="services_events_contests">
+            <h1>HackerRank HackFest <i>-HackerRank</i></h1>
+            <p>HackerRank Hackfest 2020 is an online coding competition for developers to showcase their coding skills and win exciting prizes. This contest begins on October 9th at 10 AM IST and will be open for 72 hours. This contest is open to participants from India only. The ratings of this contest will reflect on your HackerRank Profile. Join now for more information.</p>
+            <a href="registerform.html" target="_blank">Join Now</a>
+          </div>
+        </li>
+        <li>
+          <div class="services_events_date">
+            <h2>14</h2>
+            <h1>December - 2021</h1><br><br>
+            <h2><span>to</span></h2><br><br>
+            <h2>02</h2>
+            <h1>January - 2022</h1>
+          </div>
+          <div class="services_events_contests">
+            <h1>Performance Optimization <i>-Hackathon</i></h1>
+            <p>In this new style of Hackathon contest, you are given a working but inefficent code. You have to find an optimized solution and make the code as efficient as possible to score maximum points. Join now for more information.</p>
+            <a href="registerform.html" target="_blank">Join Now</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<!--End Event details -->
+<!-- footer part -->
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+      <img src="https://as1.ftcdn.net/jpg/00/97/00/00/500_F_97000073_qnDFUJdLGmxr3sIXe0CHv0MT1LbYuQKb.jpg">
+    <h3> <span>E</span>DUCATION <span>H</span>ELPLINE</h3>
+
+    <p class="footer-links">
+      <a href="project.html">Home</a>
+      |
+      <a href="aboutus.html">About</a>
+      |
+      <a href="topcourses.html">Courses</a>
+      |
+      <a href="services.html">Services</a>
+      |
+      <a href="contact.html">Contact</a>
+    </p>
+
+    <p class="footer-company-name">© 2019 EDUCATION HELPLINE Pvt. Ltd.</p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p>123,<br>Main Street,<br>New York 1001</p>
+    </div>
+    <br><br>
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>(+1)123 456 7890</p>
+    </div><br><br>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="contact_message.html" target="_blank">support@education_helpline.com</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>Connect With Us</span>
+      We offer training and skill building courses across Technology, Design, Management, Science and Humanities.</p>
+    <div class="footer-icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+    <div class="footer_apps">
+        <img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg" alt="Download on the app store" style="margin-top: 15px;"></a><br>
+        <img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png" alt="Get in on Google Play"></a>
+    </div>
+  </div>
+</footer>
+<!-- End of footer part -->
+</html>

@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="project.css">
+  <title>EDUCATION HELPLINE</title>
+  <link rel="icon" href="https://as1.ftcdn.net/jpg/00/97/00/00/500_F_97000073_qnDFUJdLGmxr3sIXe0CHv0MT1LbYuQKb.jpg">
+  <!-- rating link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <style>
+    #about_us_more_information_top {
+      background-image: url('https://cdn.pixabay.com/photo/2017/09/29/23/44/feedback-2800867_960_720.png');
+      height: 100vh;
+      background-size: cover;
+      background-position: top center;
+      position: relative;
+      box-sizing: border-box;
+    }
+    .about_us_top {
+      align-items: flex-start;
+    }
+    .about_us_top div {
+      margin-top: 175px;
+    }
+    .about_us_top div h1 {
+      color: #233e8b;
+    }
+    /* comments from clint */
+    #client_comments {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      padding-bottom: 120px;
+    }
+    .client_comment-heading {
+      letter-spacing: 1px;
+      margin: 30px 0px;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .client_comment-heading h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      background-color: #202020;
+      color: #ffffff;
+      padding: 10px 20px;
+    }
+    .client_comment-heading span {
+      font-size: 1.3rem;
+      color: #252525;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .client_comment-box-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .client_comment-box {
+      width: 500px;
+      box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      padding: 20px;
+      margin: 15px;
+      cursor: pointer;
+    }
+    .profile-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 10px;
+    }
+    .profile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+    }
+    .name-user {
+      display: flex;
+      flex-direction: column;
+    }
+    .name-user strong {
+      color: #3d3d3d;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+    .name-user span {
+      color: #979797;
+      font-size: 0.8rem;
+    }
+    .reviews {
+      color: #f9d71c;
+    }
+    .box-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .client-comment p {
+      font-size: 0.9rem;
+      color: #4b4b4b;
+    }
+    .client_comment-box:hover {
+      transform: translateY(-10px);
+      transition: all ease 0.3s;
+    }
+    ::selection {
+      color: #ffffff;
+      background-color: #252525;
+    }
+    .name-user strong {
+      font-size: small;
+    }
+    .client-comment p {
+      font-size: small;
+    }
+    .user_feedback span {
+      font-size: 1.3rem;
+      color: #252525;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    #user_feedback {
+      background-image: url('https://cdn.pixabay.com/photo/2016/02/21/00/29/feedback-1213042_960_720.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 110vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    #user_feedback h1 {
+      font-size: 2.5rem;
+      color: #c47124;
+      padding-bottom: 1.5rem;
+    }
+    .user_feedback {
+      background-color: rgb(0, 0, 0);
+      opacity: 0.95;
+      width: 75%;
+      height: 90vh;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      font-size: 2rem;
+    }
+    input[type=text],
+    input[type=email],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 15px;
+      resize: vertical;
+    }
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .feedback_button {
+      display: inline-block;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 5px;
+      font-size: 2rem;
+      text-transform: uppercase;
+      background-color: black;
+      margin-top: 10px;
+      transition: 0.3s ease;
+      transition-property: background-color, color;
+    }
+    .feedback_button:hover {
+      color: cadetblue;
+      background-color: crimson;
+      cursor: pointer;
+    }
+    .radio-inline{
+      margin: 0 40px 20px 0px;
+      cursor: pointer;
+    }
+    .form_col_half{
+      width: 50%;
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+    }
+    .form_col{
+      width: 100%;
+    }
+    .feedback_row{
+      display: flex;
+    }
+    h4{
+      color: #1cc5dc;
+      padding: 0.75em 0;
+    }
+    /* end comments from clint */
+  </style>
+</head>
+
+<header>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="project.html">
+            <h1><img src="https://as1.ftcdn.net/jpg/00/97/00/00/500_F_97000073_qnDFUJdLGmxr3sIXe0CHv0MT1LbYuQKb.jpg"
+                alt="" style="width: 2cm;height: 2cm;"> <span>E</span>ducation <span>H</span>elpline</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <ul>
+            <li><a href="project.html">Home</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="#ruthvik_1">Courses</a>
+              <div class="sub_container_1">
+                <ul>
+                  <li><a href="topcourses.html">Top Courses</a></li>
+                  <li><a href="topcoursesplatform.html">Top Courses Platforms</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+<!-- End Header -->
+<section id="about_us_more_information_top">
+  <div class="about_us_top">
+    <div>
+      <h1>About Us</h1>
+      <p><em>"Throw away the bad experience but save the lesson"</em></p>
+    </div>
+  </div>
+</section>
+<!-- comments -->
+
+<section id="client_comments">
+  <!--heading--->
+  <div class="client_comment-heading">
+    <span>We have been reviewed by 1000+ students across India</span>
+    <img src="https://media.istockphoto.com/vectors/rating-icon-flat-vector-template-design-trendy-vector-id1223287814?k=6&m=1223287814&s=612x612&w=0&h=G-WqIW9-ItgyozXjbqY7fmVm17yaSsoJzWuGa-dbNzo="
+      style="width: 100px;">
+    <h1>Student Reviews</h1>
+  </div>
+  <!--client_comments-box-container------>
+  <div class="client_comment-box-container">
+    <!--BOX-1-------------->
+    <div class="client_comment-box">
+      <!--top------------------------->
+      <div class="box-top">
+        <!--profile----->
+        <div class="profile">
+          <!--img---->
+          <div class="profile-img">
+            <img src="https://learning.codingninjas.com/wp-content/uploads/2020/02/review-1-300x300.jpeg" />
+          </div>
+          <!--name-and-username-->
+          <div class="name-user">
+            <strong>INTERN</strong>
+            <img src="https://learning.codingninjas.com/wp-content/uploads/2020/02/amazon-logo.png" alt="amazon"
+              style="width: 80px;">
+          </div>
+        </div>
+        <!--reviews------>
+        <div class="reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+      <!--Comments---------------------------------------->
+      <div class="client-comment">
+        <p>Education Helpline gave me an oppurtunity to enhance my coding skills and polish the areas of web
+          development. I was able to gain confidence from Education Helpline while appearing for interviews. I would
+          like to thank them for giving me an oppurtunity to appear for interviews and bag two placements with
+          VirSoftech and Amazon.</p>
+      </div>
+    </div>
+    <!--BOX-2-------------->
+    <div class="client_comment-box">
+      <!--top------------------------->
+      <div class="box-top">
+        <!--profile----->
+        <div class="profile">
+          <!--img---->
+          <div class="profile-img">
+            <img src="https://learning.codingninjas.com/wp-content/uploads/2020/02/manraj-1-280x300.jpg" />
+          </div>
+          <!--name-and-username-->
+          <div class="name-user">
+            <strong>INTERN</strong>
+            <img src="https://learning.codingninjas.com/wp-content/uploads/2020/02/microsoft-360x133.png"
+              alt="Microsoft" style="width: 100px;">
+          </div>
+        </div>
+        <!--reviews------>
+        <div class="reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <!--Comments---------------------------------------->
+      <div class="client-comment">
+        <p>I joined in two courses using Education Helpline C++ and DS and it was a great learning experience with both
+          the courses. Education Helpline helped me boost my overall confidence and gather in-depth knowledge about
+          coding. I would recommend students to take up a course and practise them extensively to nail job interviews.
+        </p>
+      </div>
+    </div>
+    <!--BOX-3-------------->
+    <div class="client_comment-box">
+      <!--top------------------------->
+      <div class="box-top">
+        <!--profile----->
+        <div class="profile">
+          <!--img---->
+          <div class="profile-img">
+            <img src="https://learning.codingninjas.com/wp-content/uploads/2020/02/pratham.jpg" />
+          </div>
+          <!--name-and-username-->
+          <div class="name-user">
+            <strong>INTERN</strong>
+            <img src="https://learning.codingninjas.com/wp-content/uploads/2020/02/amex.jpg" alt="American Express"
+              style="width: 90px;">
+          </div>
+        </div>
+        <!--reviews------>
+        <div class="reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+      <!--Comments---------------------------------------->
+      <div class="client-comment">
+        <p>I had signed up for Java programming and Machine learning that was shoen by Education Helpline. Each topic
+          was very well explained by the faculty in their respective platforms and it helped me attain maximum
+          information to undertake assignments and develop projects. I will recommend this course to engineering
+          aspirants and the ones looking for bright opportunities professionally.</p>
+      </div>
+    </div>
+    <!--BOX-4-------------->
+    <div class="client_comment-box">
+      <!--top------------------------->
+      <div class="box-top">
+        <!--profile----->
+        <div class="profile">
+          <!--img---->
+          <div class="profile-img">
+            <img src="https://learning.codingninjas.com/wp-content/uploads/2020/02/simra-243x300.jpeg">
+          </div>
+          <!--name-and-username-->
+          <div class="name-user">
+            <strong>PLACED</strong>
+            <img src="https://learning.codingninjas.com/wp-content/uploads/2020/02/amazon-logo.png" alt="Amazon"
+              style="width: 80px;">
+          </div>
+        </div>
+        <!--reviews------>
+        <div class="reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+      <!--Comments---------------------------------------->
+      <div class="client-comment">
+        <p>I had taken up many other online courses earlier, but my experience with Education Helpline was a pleasant
+          one. It helped me to pick a good choice of course through it. It helped me to cover most of the courses
+          through other platforms. These proved to be very developing more advanced applications. I definitely recommend
+          this platform to everyone who have an urge to start new courses.</p>
+      </div>
+    </div>
+    <!--BOX-5-------------->
+    <div class="client_comment-box">
+      <!--top------------------------->
+      <div class="box-top">
+        <!--profile----->
+        <div class="profile">
+          <!--img---->
+          <div class="profile-img">
+            <img src="https://learning.codingninjas.com/wp-content/uploads/2020/02/muskan_ambitionbox-246x300.jpeg">
+          </div>
+          <!--name-and-username-->
+          <div class="name-user">
+            <strong>PLACED</strong>
+            <img src="https://learning.codingninjas.com/wp-content/uploads/2020/02/ambition-box.png" alt=""
+              style="width: 50px;">
+          </div>
+        </div>
+        <!--reviews------>
+        <div class="reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+      <!--Comments---------------------------------------->
+      <div class="client-comment">
+        <p>My coding journey began with Education Helpline that suggests good platforms with good courses to practise
+          coding in the right direction. I liked the services which was offered by the Education Helpline. Thanks to the
+          services that has offered a never-ending support.</p>
+      </div>
+    </div>
+    <!--BOX-6-------------->
+    <div class="client_comment-box">
+      <!--top------------------------->
+      <div class="box-top">
+        <!--profile----->
+        <div class="profile">
+          <!--img---->
+          <div class="profile-img">
+            <img src="https://learning.codingninjas.com/wp-content/uploads/2020/02/pc-Gaurav-Sachdeva-280x300.jpg">
+          </div>
+          <!--name-and-username-->
+          <div class="name-user">
+            <strong>PLACED</strong>
+            <img src="https://learning.codingninjas.com/wp-content/uploads/2020/02/cult.png" alt="cult.fit"
+              style="width: 50px;">
+          </div>
+        </div>
+        <!--reviews------>
+        <div class="reviews">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </div>
+      </div>
+      <!--Comments---------------------------------------->
+      <div class="client-comment">
+        <p>My experience with Education Helpline has been bodacious. The online platform which was suggested by this
+          website helped me to acquire knowledge on several courses. I worked on some projects to gain exposure that
+          made my internship placement experience more valuable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- user_feedback section -->
+<section id="user_feedback">
+  <h1><u style="background-color: black;">Now it's your turn</u></h1>
+  <div class="user_feedback">
+    <form role="form" method="post" id="reused_form">
+      <div class="feedback_row">
+        <div class="form_col">
+          <h3>LEAVE A REPLY</h3><br>
+          <h5>Your email address will not be published. Required fields are marked<span style="color: red;font-size: large;"> *</span></h5>
+          <h4>How do you rate your overall experience?</h4>
+          <p>
+            <label class="radio-inline">
+              <input type="radio" name="experience" id="radio_experience" value="bad">
+              Bad
+            </label>
+
+            <label class="radio-inline">
+              <input type="radio" name="experience" id="radio_experience" value="average">
+              Average
+            </label>
+
+            <label class="radio-inline">
+              <input type="radio" name="experience" id="radio_experience" value="good">
+              Good
+            </label>
+          </p>
+        </div>
+      </div>
+      <h4>If you have specific feedback, write to us.</h4>
+      <div class="feedback_row">
+        <div class="form_col">
+          <label for="comments">
+            Comment</label>
+          <textarea class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comments..."
+            maxlength="6000" rows="7"></textarea>
+        </div>
+      </div>
+      <div class="feedback_row">
+        <div class="form_col_half">
+          <label for="name">
+            Your Name<span style="color: red;font-size: large;"> *</span></label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form_col_half">
+          <label for="email">
+            Email<span style="color: red;font-size: large;"> *</span></label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+      </div>
+
+      <div class="feedback_row">
+        <div class="form_col">
+          <button type="submit" class="feedback_button">Post</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- footer start -->
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+    <img src="https://as1.ftcdn.net/jpg/00/97/00/00/500_F_97000073_qnDFUJdLGmxr3sIXe0CHv0MT1LbYuQKb.jpg">
+    <h3> <span>E</span>DUCATION <span>H</span>ELPLINE</h3>
+
+    <p class="footer-links">
+      <a href="project.html">Home</a>
+      |
+      <a href="aboutus.html">About</a>
+      |
+      <a href="topcourses.html">Courses</a>
+      |
+      <a href="services.html">Services</a>
+      |
+      <a href="contact.html">Contact</a>
+    </p>
+
+    <p class="footer-company-name">© 2019 EDUCATION HELPLINE Pvt. Ltd.</p>
+  </div>
+
+  <div class="footer-center">
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p>123,<br>Main Street,<br>New York 1001</p>
+    </div>
+    <br><br>
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>(+1)123 456 7890</p>
+    </div><br><br>
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="contact_message.html" target="_blank">support@education_helpline.com</a></p>
+    </div>
+  </div>
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span>Connect With Us</span>
+      We offer training and skill building courses across Technology, Design, Management, Science and Humanities.
+    </p>
+    <div class="footer-icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+    <div class="footer_apps">
+        <img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg" alt="Download on the app store" style="margin-top: 15px;"></a><br>
+        <img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png" alt="Get in on Google Play"></a>
+    </div>
+  </div>
+</footer>
+<!-- End of footer part -->
+</html>
